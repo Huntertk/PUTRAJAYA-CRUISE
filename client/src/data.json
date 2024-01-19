@@ -1,0 +1,74 @@
+[
+    {
+        "id": "03ae3954-7eeb-48c4-81da-d80fea00b0ca",
+        "image": [
+            "https://i.postimg.cc/Bv0R2Lx5/1d.jpg",
+            "https://i.postimg.cc/9MXSN6gr/800x600-Tin-Trail.jpg",
+            "https://i.postimg.cc/Zq52fkM0/Lost-World-of-Tambun-Amusement-and-Water-Park-3640287b-11e2-4f9b-98d1-f01d432bffa9.jpg",
+            "https://i.postimg.cc/gJw5WVdW/night-park.jpg"
+        ],
+        "title": "Full Day Ticket",
+        "desc": "Unlock a day of non-stop fun with the Full Day Ticket for Lost World of Tambun. Experience thrilling rides, captivating attractions, and relax at theHot Springs, all in one unforgettable adventure. Ideal for family getaways!",
+        "type": "bookTypeOne",
+        "preference": [
+            {
+                "title": "Malaysian",
+                "price": {
+                    "adult": 89,
+                    "child": 83,
+                    "senior": 83
+                },
+                "details": [
+                    "Valid only for Malaysian Citizens"
+                ]
+            },
+            {
+                "title": "Non-Malaysian",
+                "price": {
+                    "adult": 113,
+                    "child": 107,
+                    "senior": 107
+                },
+                "details": [
+                    "Valid only for Non Malaysian Citizens"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ce8fe3fc-5d5c-4b88-9d71-5a079417166b",
+        "image": [
+            "https://i.postimg.cc/BbLmr4TQ/hotspring.jpg",
+            "https://i.postimg.cc/ydNQTFWR/hotspring-1.jpg",
+            "https://i.postimg.cc/MZgwvGr5/9-1.png",
+            "https://i.postimg.cc/1XkvP2B0/HS-Topoftheworld.jpg"
+        ],
+        "title": "Night Park + Hotspring Ticket",
+        "desc": "Experience the magic of the Night Park and Hot Springs with this special ticket for Lost World of Tambun. Enjoy an enchanting evening filled with captivating lights in the night park, followed by a relaxing retreat at the soothing Lost World Hot Springs.",
+        "type": "bookTypeTwo",
+        "preference": [
+            {
+                "title": "Malaysian",
+                "price": {
+                    "adult": 64,
+                    "child": 56,
+                    "senior": 56
+                },
+                "details": [
+                    "Valid only for Malaysian Citizens"
+                ]
+            },
+            {
+                "title": "Non-Malaysian",
+                "price": {
+                    "adult": 79,
+                    "child": 70,
+                    "senior": 70
+                },
+                "details": [
+                    "Valid only for Non Malaysian Citizens"
+                ]
+            }
+        ]
+    }
+]
