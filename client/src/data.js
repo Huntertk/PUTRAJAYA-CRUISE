@@ -53,9 +53,9 @@ export const cardData = [
             {
                 title:"Malaysian",
                 price:{
-                    adult:64,
-                    child:56,
-                    senior:56,
+                    adult:20,
+                    child:18.50,
+                    senior:18.50,
                 },
                 details:[
                     "Valid only for Malaysian Citizens"
@@ -64,9 +64,9 @@ export const cardData = [
             {
                 title:"Non-Malaysian",
                 price:{
-                    adult:79,
-                    child:70,
-                    senior:70,
+                    adult:38,
+                    child:24,
+                    senior:24,
                 },
                 details:[
                     "Valid only for Non Malaysian Citizens"
@@ -175,27 +175,27 @@ export const preferenceData = [
 export const cardHighLightsDetails = [
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/kgnp439w/Picture4.png",
-        title:"Roaring Greatness",
-        desc:"Witness the captivating performance of our Siberian tigers and their companions, showcasing an engaging spectacle featuring stunts and live feeding."
+        image: "https://i.postimg.cc/zGHJ0chg/Picture1.png",
+        title:"Relax and enjoy the scenery.",
+        desc:"Take a moment to relax and enjoy the peaceful ambiance. Let the gentle rockingof the boat and the scenic beauty of Putrajaya's surroundings create a calming experience."
     },
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/FRnPC7JB/lost-world-of-tambun.jpg",
-        title:"Flaming Percussion",
-        desc:"Prepare to be dazzled by a captivating performance uniting fire eaters and skilled percussionists, guaranteeing a truly unforgettable experience."
+        image: "https://i.postimg.cc/m25L3sP4/cruise-tasik-putrajaya-jpg.webp",
+        title:"Seeing the sights",
+        desc:"Admire the breathtaking scenery and the city's notable buildings, such as the Putra Bridge and Mosque."
     },   
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/3N5LQznX/W-Tube-Raiders.jpg",
-        title:"Tube Raiders",
-        desc:"Experience the thrill of the longest inflatable tube ride in Malaysia! Tube Raiders, a family favorite, offers four distinct slides for you to try as you navigate your way down from the towering summits."
+        image: "https://i.postimg.cc/43TTwNZD/Picture5.png",
+        title:"Sunset Views",
+        desc:"For a romantic and unforgettable experience, if you decide to go on an evening boat, take in the stunning sunset over the lake."
     },  
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/W3J9Ks6p/Tin-Valley-800x600.jpg",
-        title:"Dulang Washing",
-        desc:"The dulang, employed to gather earth mixed with water, allowed for the meticulous swirling of water to wash away the mud while leaving behind the denser tin ore."
+        image: "https://i.postimg.cc/4ynCnYb9/Picture6.png",
+        title:"Boat Tours",
+        desc:"There are two boat options available for customers to enjoy, the Dondang Sayang Boat or the Putrajaya Cruise Boat."
     },  
 ]
 
@@ -204,18 +204,18 @@ export const cardHighLightsDetails = [
 export const thingsTodo = [
     {
         id: uuidv4(),
-        desc:"Experience thrilling and family-friendly rides at the Lost World Amusement Park that will get your adrenaline pumping.",
-        image: "https://i.postimg.cc/Zq52fkM0/Lost-World-of-Tambun-Amusement-and-Water-Park-3640287b-11e2-4f9b-98d1-f01d432bffa9.jpg"
+        desc:"Embark on a sightseeing adventure by hopping on a cruise and treating yourself to a panoramic view of the picturesque Putrajaya Lake.",
+        image: "https://i.postimg.cc/0Np9qKc5/Picture3.png"
     },
     {
         id: uuidv4(),
-        desc:"Immerse yourself in the Lost World Hot Springs, surrounded by the natural beauty of the forest.",
-        image: "https://i.postimg.cc/3JQqs0cs/Picture3.png"
+        desc:"Experience tranquility on a soothing journey with Putrajaya cruise, where you canexplorethe serene side of Kuala Lumpur in Putrajaya, situated just 25km south of the capital.",
+        image: "https://i.postimg.cc/9MYXyw7g/c2.jpg"
     },
     {
         id: uuidv4(),
-        desc:"Admire the agile Siberian Tigers and learn about the Malaysian Tin Mining History",
-        image: "https://i.postimg.cc/DycxRjsG/tiger-valley.jpg"
+        desc:"Uncover distinctive local architecture at the Putrajaya Government Centre",
+        image: "https://i.postimg.cc/m25L3sP4/cruise-tasik-putrajaya-jpg.webp"
     },
     
 ]
@@ -226,9 +226,10 @@ export const addQues = [
         id: uuidv4(),
         ques:"Operating Hours ?",
         ans:[
-            "Themepark: 11am - 11pm (Mon - Fri) | 10am - 11pm (Sat - Sun)",
-            "Close every Tuesday except Public and School holiday",
-            "Lost World Night Park + Hot Springs opens daily at 6 pm - 11 pm"
+            "Trips are based on availability.",
+            "Cruise Tasik: 11am - 6.45pm (Mon-Fri) | 10am - 8pm (Sat & Sun)",
+            "Perahu Dondang Sayang: 10am - 6pm (Mon-Sunday)",
+            "Public Holiday follows Weekends Time.",
         ]
     },
     {
@@ -237,33 +238,19 @@ export const addQues = [
         ans:[
             "Adult age is 13 to 59 years old.",
             "Child age is  3 to 12 years old.",
-            "Below 90cm Free.",
             "Senior Citizen age 60 and above."
         ]
     },
     {
         id: uuidv4(),
-        ques:"Ticket Inclusion in Full day Ticket",
+        ques:"Important Notes",
         ans:[
-            "Lost World Water Park",
-            "Lost World Amusement Park",
-            "Lost World Tin Valley",
-            "Lost World Tiger Valley",
-            "Lost World Petting Zoo",
-            "Lost World Adventure Park",
-            "Lost World Night park with Hotspring",
-        ]
-    },
-    {
-        id: uuidv4(),
-        ques:"Ticket Inclusion in Night Park + Hotsprings Ticket",
-        ans:[
-            "Luminous Forest",
-            "Lost World Hot Springs & Spa",
-            "Lost World Petting Zoo by Night",
-            "Ipoh Street",
-            "Flaming Percussion",
-            "Tarantula Alley"
+            "Child rate applies for children above 80cm.",
+            "children below 80 cm height, only one (1) lap child is allowed per adult.",
+            "For Perahu Dondang Sayang, child below 90cm is not allowed",
+            "Customers who have entered their 24th week of pregnancy are not allowed",
+            "Customer should arrive at the counter at least 30 minutes before trip time.",
+            "OKU/ Disabled customers may purchased their tickets at the counter",
         ]
     },
     {
@@ -276,12 +263,17 @@ export const addQues = [
     {
         id: uuidv4(),
         ques:"Redemption Guide",
-        ans:["Upon arrival, show your ticket/e-voucher at the counter"]
+        ans:[
+            "Upon arrival, show your ticket/e-voucher at the counter",
+            "If it rains after redemption, you may refer to the counter for further information"
+        ]
     },
     {
         id: uuidv4(),
         ques:"Ticket Validity",
-        ans:["You may use the tickets within 30 days from purchased date. Once entered, no re-entry is allowed."]
+        ans:[
+            "You may use the tickets within 30 days from purchased date."
+        ]
     },
 ]
 
@@ -290,53 +282,28 @@ export const addQues = [
 export const homeFAQ = [
     {
         id: uuidv4(),
-        ques:"Can I bring food inside Lost World Of Tambun ?",
-        ans:"No. Food and drinks is prohibited inside."
+        ques:"What types of cruises are available ?",
+        ans:"Putrajaya Cruise offers a variety of cruises, such as sight seeing cruise and perahu dondang sayang."
     },
     {
         id: uuidv4(),
-        ques:"Does my 2 years old baby need to buy ticket to enter Lost World Of Tambun ?",
-        ans:"No, Child below 90cm can enter for FREE."
+        ques:"How long is a typical Putrajaya Cruise ?",
+        ans:"The duration can vary depending on the type of cruise. Daytime sight seeing cruises may be shorter, while dinner cruises or private charters may extend for a longer duration."
     },
     {
         id: uuidv4(),
-        ques:"How long can I stay inside Lost World Of Tambun ?",
-        ans:"You may stay as long as you want, no time limit."
+        ques:"What landmarks will I see during the cruise ?",
+        ans:"The cruise provides stunning views of Putrajaya's landmarks, such as the Putra Mosque, Putra Bridge, and other architectural wonders around Putrajaya Lake."
     },
     {
         id: uuidv4(),
-        ques:"When does Lost World Of Tambun Themepark close ?",
-        ans:"Lost World Of Tambun is close every Tuesday except for Public Holiday andSchool Holiday."
+        ques:"How early should I arrive for the cruise ?",
+        ans:"Arrive at least 15-30 minutes before the scheduled departure time to ensure a smooth boarding process. It's advisable to check with the operator for specific recommendations."
     },
     {
         id: uuidv4(),
-        ques:"Does my ticket includes Locker and Tubes ?",
-        ans:"No, its not included, but there are stations everywhere inside the park where guest may rent the items needed."
-    },
-    {
-        id: uuidv4(),
-        ques:"Can I enter Night park if I buy Full Day Ticket ?",
-        ans:"Yes, Customer who have Full Day Ticket may enjoy night park as well by stayinginside the park as no re-entry is allowed."
-    },
-    {
-        id: uuidv4(),
-        ques:"How can I rent a cabana for my family ?",
-        ans:"You may rent it a the counter based on the availability and size preferred."
-    },
-    {
-        id: uuidv4(),
-        ques:"Are there accommodations available on-site ?",
-        ans:"Yes, there are accommodation options within the Lost World of Tambun resort, providing convenient stays for visitors."
-    },
-    {
-        id: uuidv4(),
-        ques:"Is the Lost World of Tambun suitable for all age groups ?",
-        ans:"Yes, the park offers a variety of attractions and activities catering to visitors of all ages, making it a great destination for families and individuals alike ."
-    },
-    {
-        id: uuidv4(),
-        ques:"Is all games included in my ticket ?",
-        ans:"Several thrilling activities are available as single rides and are not included in theticket. These include experiences like Haunted Chambers, 13-High Rope Course, ZipLine, Via Ferrata with Abseil, 6th Mile Tunnel Adventure, Kayaking, Swan PaddleBoat, Boga Cruise, and Exploring Gua Datok."
+        ques:"Are there restroom facilities on the cruise boat ?",
+        ans:"Most cruise boats are equipped with restroom facilities for the convenience of passengers."
     },
 ]
 

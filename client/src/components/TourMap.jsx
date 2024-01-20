@@ -4,8 +4,8 @@ const TourMap = () => {
   return (
     <section className='tourMapMainSectionContainer'>
         <div className="mapContainer">
-            <h1>Lost World Of Tambun Guide Map</h1>
-            <img src="https://i.postimg.cc/NFmzyQ5C/park-map.jpg" alt="map" />
+            <h1>Full Route Map</h1>
+            <img src="https://i.postimg.cc/VknxSQMD/Picture9.png" alt="map" />
         </div>
     </section>
   )

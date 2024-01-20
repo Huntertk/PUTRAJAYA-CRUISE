@@ -6,25 +6,21 @@ const HomeWhyVisit = () => {
   return (
     <section className='whyVisitMainComponents'>
         
-        <h1>Why You Need to Visit Lost World Of Tambun ?</h1>
+        <h1>Why You Need to Visit Putrajaya Cruise ?</h1>
         <div className="whyVisitCardContainer">
             <div className="listData">
 
                     <p>
-                        <img src="https://i.postimg.cc/gJw5WVdW/night-park.jpg" alt="image" /><br />
-                        <span>Natural Hot Spring </span>The therapeutic effects of the hot springs provide a calming and revitalizing aspect to visitors' experiences.<br/>
+                        <img src="https://i.postimg.cc/zGHJ0chg/Picture1.png" alt="image" /><br />
+                        <span>Scenic Beauty </span>Putrajaya Cruise offers a unique and picturesque perspective of Putrajaya, allowing visitors to appreciate the stunning architecture, serene landscapes, and the overall beauty of PutrajayaLake.<br/>
                     </p>
                     <p>
-                        <img src="https://i.postimg.cc/d1WXM5gn/800x600-Dulang-Tea-House.jpg" alt="images" /><br />
-                        <span>Explorations of Caves</span>There are cave exploring chances due to the park's position in a region of hills made of limestone.<br/>
+                        <img src="https://i.postimg.cc/XvWTdHk3/Picture8.png" alt="images" /><br />
+                        <span>Architectural Wonders</span>Witness and appreciate the unique and impressive local architecture, particularly at the Putrajaya Government Centre and the Putra Mosque. This experience offers insight into Malaysia's architectural heritage and the significance of these landmarks.<br/>
                     </p>
                     <p>
-                        <img src="https://i.postimg.cc/Zq52fkM0/Lost-World-of-Tambun-Amusement-and-Water-Park-3640287b-11e2-4f9b-98d1-f01d432bffa9.jpg" alt="IMAGE" /><br />
-                        <span>Diverse Range of Activities</span>The park features a petting zoo, adventure activities, water attractions, and rides from an amusement park.<br/>
-                    </p>
-                    <p>
-                        <img src="https://i.postimg.cc/3JQqs0cs/Picture3.png" alt="IMAGE" /><br />
-                        <span>Interesting Scene</span>Those who value natural beauty may find the picturesque and tranquil ambiance created by the surrounding natural features, such include limestone hills and vegetation, to be appealing.<br/>
+                        <img src="https://i.postimg.cc/9MYXyw7g/c2.jpg" alt="IMAGE" /><br />
+                        <span>Relaxing Experience</span>Whether you choose a daytime or evening cruise, you can unwind and enjoy the soothing atmosphere of the lake, creating lasting memories of your visit to Putrajaya.<br/>
                     </p>
                     
             </div>

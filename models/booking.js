@@ -41,6 +41,10 @@ const bookingSchema = new mongoose.Schema({
     },
     prefrence:{
         type: String
+    },
+    timeSlot:{
+        name:String,
+        slot:String
     }
 },{timestamps: true})
 

@@ -35,7 +35,6 @@ const QuestionContainer = ({data}) => {
 }
 
 const HomeAdditionalInformation = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false)
     return  (
         <section className='homeFAQMainContainer'>
             <h1>Additional Information</h1>

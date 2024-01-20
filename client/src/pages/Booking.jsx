@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import image from '../assets/images/homeMain.avif'
 import axios from 'axios'
 import { BiEditAlt } from 'react-icons/bi'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
@@ -25,7 +24,8 @@ const Booking = () => {
         loading,
         type,
         bookingTitle,
-        pref
+        pref,
+        timeSlot
     } = useSelector(store => store.booking)
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -72,8 +72,18 @@ const Booking = () => {
                 <img className='banner' src={"https://i.postimg.cc/SxWvQSwn/front-gate.jpg"} alt="" />
                 <h1>Confirm and Pay</h1>
                 <div className="detailsWrapper">
-                    <p className='bookingType'>{bookingTitle}</p>
-                    {pref && <p className='bookingType'>{pref}</p>}
+                    <div className="detailsContainerWithTimeSlot">
+                        <div className="">
+                            <p className='bookingType'>{bookingTitle}</p>
+                            {pref && <p className='bookingType'>{pref}</p>}
+                        </div>
+                        {
+                            timeSlot.name && <div className="">
+                            {timeSlot.name && <p className='bookingType'>{timeSlot.name}</p>}
+                            {timeSlot.timeSlot && <p className='bookingType'>{timeSlot.timeSlot}</p>}
+                        </div>
+                        }
+                    </div>
                     <div className="topContainer">
                         <p>{bookingDate}</p>
                         <Link to="/date-confirm"><BiEditAlt /></Link>
