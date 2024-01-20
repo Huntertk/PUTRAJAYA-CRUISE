@@ -18,7 +18,6 @@ const BookingCard = (props) => {
         email,
         adultCount,
         childCount,
-        generalCount,
         seniorCount,
         bookingStatus,
         createdAt,
@@ -26,8 +25,10 @@ const BookingCard = (props) => {
         totalAmount,
         bookingId,
         bookingTitle,
-        prefrence
+        prefrence,
+        timeSlot
     }  = props.booking
+
 
     const [newBookingStatus, setNewBookingStatus] = useState("")
       const updateBooking = async () => {
@@ -50,6 +51,8 @@ const BookingCard = (props) => {
           <p>Date of Reservation : {bookingDate}</p>
           <p>Reservation-Type : {bookingTitle}</p>
           { prefrence && <p>Citizen-Type : {prefrence}</p>}
+          {timeSlot.name && <p>Slot Name {timeSlot.name}</p>}
+          {timeSlot.timeSlot && <p>Slot Time {timeSlot.timeSlot}</p>}
           <p>Booked By : {name}</p>
           <p>Contact : {mobileNumber}</p>
           <p>Email : {email}</p>
