@@ -1,7 +1,6 @@
 @use './variables.scss' as *;
 .prefrenceTab{
     display: grid;
-    width: 100%;
     padding: 1rem;
 
     .prefrenceTabCardContainer{
@@ -46,3 +45,5 @@
         }
     }
 }
+
+
