@@ -173,7 +173,7 @@ export const successBooking = async (req, res, next) => {
                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/dVBgmQnz/main-phone.jpg" alt style="display: block;" width="455"></a></td>
+                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/sDXfZXDK/Ewv-F35-GVIAM-BPE.jpg" alt style="display: block;" width="455"></a></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
@@ -246,7 +246,7 @@ export const successBooking = async (req, res, next) => {
                                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                                             <tbody>
                                                                                                 <tr>
-                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/zGmQ1bPm/0-26316-AWSS3f655f9b5-d5bf-466b-927f-bd09ad49cd3a-ODk-Z.jpg" alt style="display: block;" height="200" width-"150"></a></td>
+                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/C5Mh7MCh/7.jpg" alt style="display: block;" height="200" width-"150"></a></td>
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
@@ -267,7 +267,8 @@ export const successBooking = async (req, res, next) => {
                                                                                                     <td align="left" class="esd-block-text">
                                                                                                         <p style="font-size: 18px; color: #f26823;"><strong>${req.body.bookingTitle}</strong><br></p>
                                                                                                         <p style="font-size: 18px; color: #f26823;"><br></p>
-                                                                                                        ${req.body.prefrence && `<p style="font-size: 18px; color: #f26823;"><strong>${req.body.prefrence}</strong></p>` }
+                                                                                                        ${req.body.timeSlot && `<p style="font-size: 18px; color: #f26823;"><strong>${req.body.timeSlot.name} : ${req.body.timeSlot.timeSlot}</strong></p>` }
+                                                                                                        ${req.body.prefrence && `<p style="font-size: 18px; color: #f26823;"><strong>${req.body.prefrence} </strong></p>` }
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>

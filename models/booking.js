@@ -44,7 +44,7 @@ const bookingSchema = new mongoose.Schema({
     },
     timeSlot:{
         name:String,
-        slot:String
+        timeSlot:String
     }
 },{timestamps: true})
 

@@ -28,7 +28,8 @@ const PaymentSucess = () => {
     pref,
     adultTotal,
     childTotal,
-    seniorTotal
+    seniorTotal,
+    timeSlot
 
   } = useSelector(store => store.booking)
   const dispatch = useDispatch()
@@ -52,7 +53,8 @@ const PaymentSucess = () => {
           prefrence: pref,
           adultTotal,
           childTotal,
-          seniorTotal
+          seniorTotal,
+          timeSlot
       })
         dispatch(settingBookingResponse({createBookingId}))
         // navigate("/bookingconfirm")
