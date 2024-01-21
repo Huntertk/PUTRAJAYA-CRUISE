@@ -17,21 +17,6 @@ const AdminLogin = () => {
 
   const [adminLogin] = useAdminLoginMutation()
 
-  // const handleAdminLogin = async (e) => {
-  //   e.preventDefault()
-  //   try {
-    //     dispatch(adminLoginStart())
-    //     const res = await axios.post('/api/v1/admin/login', {email, password})
-    //     dispatch(adminLoginSuccess(res.data.user))
-    //     toast.success("Admin Login Successfully")
-    //     navigate("/admin/all-booking")
-    //   } catch (error) {
-      //     console.log(error);
-      //     dispatch(adminLoginFailed(error.response.data.msg))
-      //     toast.error(error.response.data.msg)
-      //   }
-      // }
-      
       const handleAdminLogin = async (e) => {
        e.preventDefault()
         adminLogin({email, password})
