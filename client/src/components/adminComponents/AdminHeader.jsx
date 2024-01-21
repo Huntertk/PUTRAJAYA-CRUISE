@@ -6,10 +6,13 @@ import {BiAlignLeft} from 'react-icons/bi'
 import { adminLogout, adminSidebarOpen } from '../../features/admin/adminSlice'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import { useGetAdminDataQuery } from '../../redux/api/adminAuthApi'
 
 const AdminHeader = () => {
     const {adminEmail} = useSelector(state => state.admin)
     const dispatch = useDispatch()
+
+    const {isLoading} = useGetAdminDataQuery()
 
 
     const handleLogout = async () => {

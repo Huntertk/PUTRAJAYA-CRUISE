@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../styles/adminLogin.scss'
 import bgImg from '../../assets/images/adminLogin.jpg'
 import axios from 'axios'
@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import { adminLoginFailed, adminLoginStart, adminLoginSuccess } from '../../features/admin/adminSlice'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import { useAdminLoginMutation } from '../../redux/api/adminAuthApi'
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("")
@@ -14,21 +15,33 @@ const AdminLogin = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const handleAdminLogin = async (e) => {
-    e.preventDefault()
-    try {
-      dispatch(adminLoginStart())
-      const res = await axios.post('/api/v1/admin/login', {email, password})
-      dispatch(adminLoginSuccess(res.data.user))
-      toast.success("Admin Login Successfully")
-      navigate("/admin/all-booking")
-    } catch (error) {
-      console.log(error);
-      dispatch(adminLoginFailed(error.response.data.msg))
-      toast.error(error.response.data.msg)
-    }
-  }
+  const [adminLogin] = useAdminLoginMutation()
 
+  // const handleAdminLogin = async (e) => {
+  //   e.preventDefault()
+  //   try {
+    //     dispatch(adminLoginStart())
+    //     const res = await axios.post('/api/v1/admin/login', {email, password})
+    //     dispatch(adminLoginSuccess(res.data.user))
+    //     toast.success("Admin Login Successfully")
+    //     navigate("/admin/all-booking")
+    //   } catch (error) {
+      //     console.log(error);
+      //     dispatch(adminLoginFailed(error.response.data.msg))
+      //     toast.error(error.response.data.msg)
+      //   }
+      // }
+      
+      const handleAdminLogin = async (e) => {
+       e.preventDefault()
+        adminLogin({email, password})
+    }
+
+    useEffect(() => {
+      if(adminEmail){
+        navigate("/admin/all-booking")
+      }
+    }, [adminEmail])
 
   return (
     <main className='mainContainer' style={{backgroundImage: `url(${bgImg})`}}>

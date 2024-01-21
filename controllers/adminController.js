@@ -2,7 +2,18 @@ import { StatusCodes } from "http-status-codes";
 import Admin from "../models/admin.js";
 import bcrypt from 'bcryptjs'
 import { BadRequestError, NotFoundError, UnauthorizedError } from "../error/customError.js";
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
+
+
+export const getAdminData = async (req, res, next) => {
+    try {
+        res.status(200).json({
+            admin: req.admin
+        })
+    } catch (error) {
+        next(error)
+    }
+}
 
 export const registerAdmin = async (req, res, next) => {
     const {email, password} = req.body
