@@ -1,21 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import '../../styles/adminLogin.scss'
 import bgImg from '../../assets/images/adminLogin.jpg'
-import axios from 'axios'
 import {useSelector, useDispatch} from 'react-redux'
-import { adminLoginFailed, adminLoginStart, adminLoginSuccess } from '../../features/admin/adminSlice'
-import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { useAdminLoginMutation } from '../../redux/api/adminAuthApi'
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const {adminEmail, loading, error} = useSelector(state => state.admin) 
-  const dispatch = useDispatch()
+  const {adminEmail} = useSelector(state => state.admin) 
   const navigate = useNavigate()
 
-  const [adminLogin] = useAdminLoginMutation()
+  const [adminLogin, {isLoading}] = useAdminLoginMutation()
 
       const handleAdminLogin = async (e) => {
        e.preventDefault()
@@ -47,7 +43,7 @@ const AdminLogin = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 />
-                <button type='submit' disabled={loading}>{loading ? "Loading...." : "login"}</button>
+                <button type='submit' disabled={isLoading}>{isLoading ? "Loading...." : "login"}</button>
             </form>
         </div>
     </main>
