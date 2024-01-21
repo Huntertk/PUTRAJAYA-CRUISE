@@ -27,6 +27,7 @@ const BookTypeTwoDate = () => {
             setSelectedDate("")
             setIsLoading(false)
           } catch (error) {
+            setIsLoading(false)
             console.log(error);
           }
         }
@@ -37,6 +38,7 @@ const BookTypeTwoDate = () => {
             setBlockedDates(data.blockDates)
           } catch (error) {
             console.log(error);
+            setIsLoading(false)
           }
         }
         
@@ -47,6 +49,7 @@ const BookTypeTwoDate = () => {
             setIsFetch(prev => !prev)
             setIsLoading(false)
           } catch (error) {
+            setIsLoading(false)
             console.log(error);
           }
         }

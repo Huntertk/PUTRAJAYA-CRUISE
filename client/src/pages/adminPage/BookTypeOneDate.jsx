@@ -47,6 +47,7 @@ const BookTypeOneDate = () => {
             setIsFetch(prev => !prev)
             setIsLoading(false)
           } catch (error) {
+            setIsLoading(false)
             console.log(error);
           }
         }
