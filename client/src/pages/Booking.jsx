@@ -18,8 +18,6 @@ const Booking = () => {
         adultTotal,
         childCount,
         childTotal,
-        seniorCount,
-        seniorTotal,
         totalAmount,
         loading,
         type,
@@ -44,7 +42,6 @@ const Booking = () => {
                 bookingDate,
                 adultCount,
                 childCount,
-                seniorCount,
                 totalAmount,
                 bookingTitle,
                 bookingType: type,
@@ -102,13 +99,6 @@ const Booking = () => {
                             childCount === 0 ? "" : <div className="guest">
                                 <p> Child <span> X {childCount}</span></p>
                                 <span>MYR {childTotal}</span>
-                            </div>
-                        }
-
-                        {
-                            seniorCount === 0 ? "" : <div className="guest">
-                                <p> Senior <span> X {seniorCount}</span></p>
-                                <span>MYR {seniorTotal}</span>
                             </div>
                         }
 

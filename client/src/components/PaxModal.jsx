@@ -9,11 +9,8 @@ import {
     adultCountDecrease, 
     childCountIncrease, 
     childCountDecrease,
-    seniorCountDecrease,
-    seniorCountIncrease,
     adultTotalAmount,
     childTotalAmount,
-    seniorTotalAmount,
     countTotalBookingAmount,
     cancelBooking,
     closePaxModel,
@@ -58,11 +55,9 @@ const Pax = ({category, ageText, count, actionType, total}) => {
 const PaxModal = ({selectedDate}) => {
     const {
         adultCount, 
-        childCount, 
-        seniorCount,
+        childCount,
         adultTotal,
         childTotal,
-        seniorTotal,
         totalAmount,
         bookingDate,
         pref,
@@ -75,10 +70,9 @@ const PaxModal = ({selectedDate}) => {
     useEffect(() => {
         dispatch(adultTotalAmount())
         dispatch(childTotalAmount())
-        dispatch(seniorTotalAmount())
         dispatch(countTotalBookingAmount())
 
-    },[adultCount, childCount, seniorCount])
+    },[adultCount, childCount])
     const navigate = useNavigate()
 
   return (
@@ -115,16 +109,6 @@ const PaxModal = ({selectedDate}) => {
                     decrease: childCountDecrease
                 }}
                 total={childTotal}
-                />
-                <Pax  
-                category ={"Senior"} 
-                ageText={"above 60 yrs"} 
-                count={seniorCount}
-                actionType={{
-                    increase: seniorCountIncrease,
-                    decrease: seniorCountDecrease
-                }}
-                total={seniorTotal}
                 />
         </div>
             <div className="totalPayable">

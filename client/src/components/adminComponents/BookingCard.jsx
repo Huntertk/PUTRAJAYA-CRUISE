@@ -18,7 +18,6 @@ const BookingCard = (props) => {
         email,
         adultCount,
         childCount,
-        seniorCount,
         bookingStatus,
         createdAt,
         updatedAt,
@@ -60,7 +59,6 @@ const BookingCard = (props) => {
           <div className="personCount">
             <p>Adult X {adultCount}</p>
             <p>Child X {childCount}</p>
-            <p>Senior X {seniorCount}</p>
           </div>
           <div className="bookingStatus">
             <span>Booking Status : </span>

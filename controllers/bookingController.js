@@ -16,8 +16,6 @@ export const createBooking = async (req, res) => {
         bookingDate,
         adultCount,
         childCount,
-        generalCount,
-        seniorCount,
         totalAmount,
         bookingType,
         bookingTitle,
@@ -59,8 +57,6 @@ export const createBooking = async (req, res) => {
                     bookingDate,
                     adultCount,
                     childCount,
-                    generalCount,
-                    seniorCount,
                     totalAmount,
                 },
             },
@@ -479,81 +475,6 @@ export const successBooking = async (req, res, next) => {
                                                                                                     <tr>
                                                                                                         <td align="right" class="esd-block-text">
                                                                                                             <p style="font-size: 16px; color: #f26823;"><strong>MYR ${req.body.childTotal}</strong></p>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <td align="center" class="esd-block-spacer es-p5t es-p5b" style="font-size:0">
-                                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
-                                                                                                                <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td style="border-bottom: 1px solid #a0937d; background: none; height: 1px; width: 100%; margin: 0px;"></td>
-                                                                                                                    </tr>
-                                                                                                                </tbody>
-                                                                                                            </table>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    ` : ""
-                                                }
-
-                                                ${req.body.seniorCount ? ` 
-                                                    <tr>
-                                                        <td class="esd-structure esdev-adapt-off es-p10t es-p10b es-p20r es-p20l" align="left">
-                                                            <table width="560" cellpadding="0" cellspacing="0" class="esdev-mso-table">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="esdev-mso-td" valign="top">
-                                                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td width="267" class="esd-container-frame" align="left">
-                                                                                            <table cellpadding="0" cellspacing="0" width="100%">
-                                                                                                <tbody>
-                                                                                                    <tr>
-                                                                                                        <td align="left" class="esd-block-text">
-                                                                                                            <p style="font-size: 16px; color: #f26823;"><strong>Senior X ${req.body.seniorCount}</strong></p>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <td align="center" class="esd-block-spacer es-p5t es-p5b" style="font-size:0">
-                                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
-                                                                                                                <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td style="border-bottom: 1px solid #a0937d; background: none; height: 1px; width: 100%; margin: 0px;"></td>
-                                                                                                                    </tr>
-                                                                                                                </tbody>
-                                                                                                            </table>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                        <td width="20"></td>
-                                                                        <td class="esdev-mso-td" valign="top">
-                                                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td width="273" align="left" class="esd-container-frame">
-                                                                                            <table cellpadding="0" cellspacing="0" width="100%">
-                                                                                                <tbody>
-                                                                                                    <tr>
-                                                                                                        <td align="right" class="esd-block-text">
-                                                                                                            <p style="font-size: 16px; color: #f26823;"><strong>MYR ${req.body.seniorTotal}</strong></p>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>

@@ -21,18 +21,12 @@ const bookingPlanSchema = new mongoose.Schema({
             child:{
                 type: Number
             },
-            senior:{
-                type: Number
-            },
         },
         nonMalaysian:{
             adult:{
                 type: Number
             },
             child:{
-                type: Number
-            },
-            senior:{
                 type: Number
             },
         }

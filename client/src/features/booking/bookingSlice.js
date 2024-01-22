@@ -7,11 +7,8 @@ import { publicHolidays } from "../../data";
 const initialState = {
     adultCount:0,
     childCount:0,
-    seniorCount:0,
     adultTotal: 0,
     childTotal: 0,
-    seniorTotal: 0,
-    totalAmount: 0,
     isPaxModal: false,
     loading: false,
     totalAmount: 0,
@@ -48,20 +45,7 @@ const bookingSlice = createSlice({
         childCountDecrease : (state, action) => {
             state.childCount = state.childCount - 1
         },
-        infantCountIncrease : (state, action) => {
-            state.infantCount = state.infantCount + 1
-        },
-        infantCountDecrease : (state, action) => {
-            state.infantCount = state.infantCount - 1
-        },
-        seniorCountIncrease : (state, action) => {
-            state.seniorCount = state.seniorCount + 1
-        },
-        seniorCountDecrease : (state, action) => {
-            state.seniorCount = state.seniorCount - 1
-        },
         adultTotalAmount: (state) => {
-            const publicHoliday = publicHolidays.includes(state.bookingDate);
 
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian") {
@@ -78,7 +62,6 @@ const bookingSlice = createSlice({
             }
         },
         childTotalAmount: (state) => {
-            const publicHoliday = publicHolidays.includes(state.bookingDate);
 
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian") {
@@ -91,28 +74,11 @@ const bookingSlice = createSlice({
                     state.childTotal = state.childCount *  state.prefrenceOpt[0].price.child
                 }  else if(state.pref === 'Non-Malaysian') {
                     state.childTotal = state.childCount *  state.prefrenceOpt[1].price.child
-                }
-            }
-        },
-        seniorTotalAmount: (state) => {
-            const publicHoliday = publicHolidays.includes(state.bookingDate);
-
-            if(state.type === 'bookTypeOne'){
-                if(state.pref === "Malaysian") {
-                    state.seniorTotal = state.seniorCount *  state.prefrenceOpt[0].price.senior
-                } else if(state.pref === 'Non-Malaysian') {
-                    state.seniorTotal = state.seniorCount *  state.prefrenceOpt[1].price.senior
-                }
-            } else if(state.type === 'bookTypeTwo'){
-                if(state.pref === "Malaysian") {
-                    state.seniorTotal = state.seniorCount *  state.prefrenceOpt[0].price.senior
-                } else if(state.pref === 'Non-Malaysian') {
-                    state.seniorTotal = state.seniorCount *  state.prefrenceOpt[1].price.senior
                 }
             }
         },
         countTotalBookingAmount: (state, action) => {
-            state.totalAmount = state.adultTotal + state.childTotal + state.seniorTotal
+            state.totalAmount = state.adultTotal + state.childTotal
             state.bookingResponse = ""
         },
         setBookingDate: (state, action) => {
@@ -185,14 +151,8 @@ export const {
     adultCountDecrease, 
     childCountIncrease, 
     childCountDecrease,
-    infantCountDecrease,
-    infantCountIncrease,
-    seniorCountDecrease,
-    seniorCountIncrease,
     adultTotalAmount,
     childTotalAmount,
-    infantTotalAmount,
-    seniorTotalAmount,
     countTotalBookingAmount, 
     setBookingDate,
     openPaxModel,
@@ -206,9 +166,6 @@ export const {
     settingBookingResponse,
     initialRender,
     setPreference,
-    generalCountDecrease,
-    generalCountIncrease,
-    generalTotalAmount,
     selectTimeSlot
 } = bookingSlice.actions
 
