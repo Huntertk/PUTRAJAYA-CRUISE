@@ -6,7 +6,7 @@ import { format,differenceInCalendarDays } from 'date-fns';
 // import PaxModal from './PaxModal';
 import { DayPicker, Row } from 'react-day-picker';
 import { useDispatch, useSelector } from 'react-redux';
-import { openPaxModel, setBookingDate, setPreference } from '../features/booking/bookingSlice';
+import { openPaxModel, selectTimeSlot, setBookingDate, setPreference } from '../features/booking/bookingSlice';
 import {Navigate, useNavigate} from 'react-router-dom'
 import PaxModal from './PaxModal';
 import axios from 'axios'
@@ -154,6 +154,11 @@ const BookingDateConfirmation = () => {
             if(isLoading){
               return <LoadingSpinner />
             }
+
+            const setSelectedDateHandler = (date) => {
+                dispatch(selectTimeSlot({selectedTimeSlot:{}}))
+                setSelectedDate(date)
+            }
   return (
     <section className='bookingDateConfirmationMainContainer'>
         <div className="bookingDateWrapper">
@@ -173,7 +178,7 @@ const BookingDateConfirmation = () => {
             fromDate={new Date()}
             components={{ Row: OnlyFutureRow }}
             hidden={isPastDate}
-            onSelect={setSelectedDate}
+            onSelect={setSelectedDateHandler}
             fromMonth={defaultMonth}
             toDate={new Date(Date.now() + 1000 * 60 *60 *24 *90)}
             disabled={disabledDates}
