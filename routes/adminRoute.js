@@ -1,6 +1,6 @@
 import {Router} from 'express'
-import { getAdminData, loginAdmin, logoutAdmin, registerAdmin } from '../controllers/adminController.js'
 import { authAdmin } from '../middlewares/authMiddleware.js'
+import { getAdminData, loginAdmin, logoutAdmin, registerAdmin } from '../controllers/adminController.js'
 
 
 const router  = Router()

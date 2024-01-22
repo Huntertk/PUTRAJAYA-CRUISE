@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/timeSlot.scss'
-import { publicHolidays, timeSlots } from '../data';
-import {useDispatch, useSelector} from 'react-redux'
-import { selectTimeSlot } from '../features/booking/bookingSlice';
+import '../../styles/timeSlot.scss'
+import { publicHolidays, timeSlots } from '../../data';
 import { format } from 'date-fns';
 import axios from 'axios';
 
-const TimeSlotSelection = ({selectedDate}) => {
+const AdminTimeSlotSelection = ({selectedDate}) => {
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState("")
   const [blockedTime, setBlockedTime] = useState([])
-  const {timeSlot} = useSelector(state => state.booking);
-  const dispatch = useDispatch()
+
   const day = selectedDate?.toString()?.split(' ')[0];
   const formattedSelectedDate = format(selectedDate, "PPP") 
+  const [isFetch, setIsFetch] = useState(false)
   const isPublicHoliday = publicHolidays.includes(formattedSelectedDate)
   let timeSlotData;
   
@@ -31,23 +30,31 @@ const TimeSlotSelection = ({selectedDate}) => {
       
     } catch (error) {
       setBlockedTime([])
-      console.log(error);
     }
   }
+  
 
-  useEffect(() => {
-    getBlockedTimeSlot()
-  }, [selectedDate])
-    
+  const timeSlotBlockHandler = async () => {
+    try {
+      const {data} = await axios.post("/api/v1/booktype-one-timeslot-manage/timeslot", {date: dateString, name: selectedTimeSlot})
+      setIsFetch((prev) => !prev)
+    } catch (error) {
+      setIsFetch((prev) => !prev)
+    }
+  }
+    useEffect(() => {
+      getBlockedTimeSlot()
+    }, [selectedDate, isFetch])
   return (
     <section className='timeSlotsContainer'>
         <h1>Select Time Slot</h1>
+          <p>{selectedTimeSlot}</p>
         <div className="timSlotWrapper">
             {timeSlotData.map((time, i) => {
                 return <button 
                 key={i} 
-                onClick={() => dispatch(selectTimeSlot({selectedTimeSlot:time}))}
-                className={timeSlot.name === time.name ? "selected" : blockedTime.includes(time.name) ? 'disabled' : ""}
+                onClick={() => setSelectedTimeSlot(time.name)}
+                className={blockedTime.includes(time.name) ? 'disabled' : ""}
                 disabled={blockedTime.includes(time.name)}
                 >
                  <span>{time.name}</span>   
@@ -55,10 +62,9 @@ const TimeSlotSelection = ({selectedDate}) => {
                 </button>
             })}
         </div>
-        <h1>{timeSlot.name}</h1>
-        <h1>{timeSlot.timeSlot}</h1>
+        <button className='btn-block' onClick={timeSlotBlockHandler}>Block Time</button>
     </section>
   )
 }
 
-export default TimeSlotSelection
+export default AdminTimeSlotSelection

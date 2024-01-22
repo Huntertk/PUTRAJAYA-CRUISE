@@ -27,17 +27,28 @@
             justify-content: center;
             padding: 0.6rem 1rem;
             border-radius: 14px;
-
+            
             &:hover{
                 background-color: $primary;
                 color: #fff;
             }
+        }
+        .disabled{
+            background-color: slategray;
+            cursor: not-allowed;
+        } 
+        .disabled:hover{
+            background-color: slategray;
+
         }
         .selected{
             background-color: $primary;
             color: #fff;    
         }
     }
+    .btn-block{
+        margin: 1rem 0;
+    } 
 }
 
 

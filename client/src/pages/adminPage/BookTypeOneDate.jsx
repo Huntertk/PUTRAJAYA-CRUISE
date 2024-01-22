@@ -6,6 +6,7 @@ import { DayPicker, Row } from 'react-day-picker';
 import {toast} from 'react-toastify'
 import moment from 'moment'
 import '../../styles/manageDates.scss'
+import TimeSlotBlocking from '../../components/adminComponents/TimeSlotBlocking';
 
 const BookTypeOneDate = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -58,6 +59,7 @@ const BookTypeOneDate = () => {
 
   return (
     <div className='mainDateManageContainer'>
+    
         <h1>Cruise Tasik<br /> Date Manage</h1>
         <DayPicker
                 defaultMonth={new Date(Date.now())}
@@ -88,6 +90,9 @@ const BookTypeOneDate = () => {
         })}
         </div>
        </div>
+       <div>
+        <TimeSlotBlocking />
+      </div>
     </div>
   )
 }
