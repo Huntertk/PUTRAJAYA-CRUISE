@@ -37,8 +37,8 @@ export const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `https://lostworldoftambun.malaysia-experience.com/${responseClientUrl}`,
-            cancel_url: 'https://lostworldoftambun.malaysia-experience.com/',
+            success_url: `https://putrajaya-cruise.onrender.com/${responseClientUrl}`,
+            cancel_url: 'https://putrajaya-cruise.onrender.com/',
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',
