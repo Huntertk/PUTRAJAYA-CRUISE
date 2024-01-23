@@ -50,8 +50,8 @@ const BookingCard = (props) => {
           <p>Date of Reservation : {bookingDate}</p>
           <p>Reservation-Type : {bookingTitle}</p>
           { prefrence && <p>Citizen-Type : {prefrence}</p>}
-          {timeSlot.name && <p>Slot Name {timeSlot.name}</p>}
-          {timeSlot.timeSlot && <p>Slot Time {timeSlot.timeSlot}</p>}
+          {timeSlot?.name && <p>Slot Name {timeSlot.name}</p>}
+          {timeSlot?.timeSlot && <p>Slot Time {timeSlot.timeSlot}</p>}
           <p>Booked By : {name}</p>
           <p>Contact : {mobileNumber}</p>
           <p>Email : {email}</p>

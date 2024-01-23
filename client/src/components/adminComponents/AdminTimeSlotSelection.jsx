@@ -62,7 +62,7 @@ const AdminTimeSlotSelection = ({selectedDate}) => {
                 </button>
             })}
         </div>
-        <button className='btn-block' onClick={timeSlotBlockHandler}>Block Time</button>
+        {selectedTimeSlot && <button className='btn-block' onClick={timeSlotBlockHandler}>Block Time</button>}
     </section>
   )
 }

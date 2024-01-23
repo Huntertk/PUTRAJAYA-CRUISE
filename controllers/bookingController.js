@@ -263,7 +263,7 @@ export const successBooking = async (req, res, next) => {
                                                                                                     <td align="left" class="esd-block-text">
                                                                                                         <p style="font-size: 18px; color: #f26823;"><strong>${req.body.bookingTitle}</strong><br></p>
                                                                                                         <p style="font-size: 18px; color: #f26823;"><br></p>
-                                                                                                        ${req.body.timeSlot && `<p style="font-size: 18px; color: #f26823;"><strong>${req.body.timeSlot.name} : ${req.body.timeSlot.timeSlot}</strong></p>` }
+                                                                                                        ${req.body.timeSlot?.name && `<p style="font-size: 18px; color: #f26823;"><strong>${req.body.timeSlot.name} : ${req.body.timeSlot.timeSlot}</strong></p>` }
                                                                                                         ${req.body.prefrence && `<p style="font-size: 18px; color: #f26823;"><strong>${req.body.prefrence} </strong></p>` }
                                                                                                 </tr>
                                                                                             </tbody>
